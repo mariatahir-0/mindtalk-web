@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTalks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="indexold.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="indexold.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Share What’s on<br> Your Mind </h1>
+    <p>A calm, safe space to express, heal, and grow together.</p>
+    <a href="chatbot.html" class="btn">Start Talking</a>
+  </div>
+
+
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="mindtalks/mind.mp4" type="video/mp4">
+  </video>
+</section>
+
+
+<section class="voices">
+  <h2>Real Voices, Real Feelings</h2>
+  <p class="subtitle">Stories that speak from the heart 💭</p>
+
+  <div class="voices-grid">
+    <div class="voice-card">
+      <img src="mindtalks/img.webp" alt="Person 1">
+      <p>"Sometimes all we need is someone who truly listens."</p>
+      <span>— Ayesha, Karachi</span>
+      <audio controls>
+        <source src="mindtalks/voice.mp3" type="audio/mpeg">
+    
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <img src="mindtalks/img1.png" alt="Person 2">
+      <p>"Healing starts when we share our stories without fear."</p>
+      <span>— Hamza, Lahore</span>
+      <audio controls>
+        <source src="mindtalks/voic1.mp3" type="audio/mpeg">
+      
+      </audio>
+    </div>
+
+    <div class="voice-card">
+      <img src="mindtalks/img2.jpg" alt="Person 3">
+      <p>"Even the smallest steps count when it comes to self-care."</p>
+      <span>— Sara, Islamabad</span>
+      <audio controls>
+        <source src="mindtalks/voice2.mp3" type="audio/mpeg">
+      
+      </audio>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <h2>Explore MindTalks</h2>
+  <p class="subtitle">Find peace, share feelings, and connect in your own way 🌿</p>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <img src="mindtalks/calm.jpg" alt="Calm Zone">
+      <h3>🧘 Calm Zone</h3>
+      <p>Relax your mind with peaceful activities and soothing visuals.</p>
+      <a href="calm.html" class="feature-btn">Explore</a>
+    </div>
+
+    <div class="feature-card">
+      <img src="mindtalks/coneg.jpg" alt="Confession Board">
+      <h3>💬 Confession Board</h3>
+      <p>Share your thoughts freely — a safe space without judgment.</p>
+      <a href="confession.html" class="feature-btn">Explore</a>
+    </div>
+
+    <div class="feature-card">
+      <img src="mindtalks/bott1.jpg" alt="Chatbot">
+      <h3>🤖 ChatBot</h3>
+      <p>Talk anytime, anywhere — your calm companion is always here.</p>
+      <a href="chatbot.html" class="feature-btn">Explore</a>
+    </div>
+
+    <div class="feature-card">
+      <img src="mindtalks/blog.jpg" alt="Blogs">
+      <h3>🪷 Mind Blogs</h3>
+      <p>Read inspiring stories and find new ways to heal and grow.</p>
+      <a href="blogs.html" class="feature-btn">Explore</a>
+    </div>
+  </div>
+</section>
+<section class="affirmation-wall">
+  <div class="affirmation-content">
+    <h2 class="title"> Affirmation Wall </h2>
+    <p class="subtitle">A gentle reminder for your soul 💫</p>
+
+    <div class="affirmation-container">
+      <p class="affirmation-text" id="affirmationText">
+        You are a work in progress, and that’s beautiful. 💜
+      </p>
+    </div>
+
+    <button class="next-btn" onclick="nextAffirmation()">Next Affirmation 🌿</button>
+  </div>
+
+  <div class="affirmation-image">
+    <img src="mindtalks/walll2.jpg" alt="Calm Nature">
+  </div>
+</section>
+
+
+<section class="kind-words-section">
+  <div class="kind-left">
+    <img src="mindtalks/kind.jpg" alt="Kindness illustration">
+  </div>
+
+  <div class="kind-right">
+    <h2>Kind Words Wall</h2>
+    <p class="subtitle">Leave a gentle note — someone out there might need it 💜</p>
+
+    <form id="kindForm" onsubmit="addKindWord(event)">
+      <input type="text" id="kindInput" placeholder="Write something kind..." maxlength="80" required>
+      <button type="submit">Send 💫</button>
+    </form>
+
+    <div id="kindContainer" class="kind-container"></div>
+  </div>
+</section>
+<footer class="mindtalks-footer">
+  <div class="footer-glow"></div>
+
+  <div class="footer-container">
+  
+    <div class="footer-brand">
+      <h2>Mind<span>Talks</span></h2>
+      <p>Find calm in thoughts. Reflect. Relax. Reconnect with yourself.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Calm Zone</a></li>
+        <li><a href="#">Tips</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-newsletter">
+      <h3>Stay in Touch</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>MindTalks</span> — Find peace within 💜</p>
+  </div>
+</footer>
+<script src="indexold.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".voices h2, .voices .subtitle", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.5,
+    delay:0.5,
+    scrollTrigger: {
+      trigger: ".voices",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+  gsap.utils.toArray(".voice-card").forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: "power2.out",
+      delay: i * 0.7,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+
+  // Smooth hover (non-destructive)
+  document.querySelectorAll(".voice-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { scale: 1.03, duration: 0.3, ease: "power2.out" });
+    });
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { scale: 1, duration: 0.3, ease: "power2.out" });
+    });
+  });
+   gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".features h2, .features .subtitle", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".features",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".feature-card", {
+    opacity: 0,
+    y: 40,
+    duration: 0.9,
+    ease: "power2.out",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".feature-grid",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  document.querySelectorAll(".feature-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { y: -5, scale: 1.03, duration: 0.3, ease: "power2.out" });
+    });
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { y: 0, scale: 1, duration: 0.3, ease: "power2.out" });
+    });
+  });
+
+  gsap.from(".affirmation-wall .title, .affirmation-wall .subtitle", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 1,
+    scrollTrigger: {
+      trigger: ".affirmation-wall",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".affirmation-container", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+   delay:0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".affirmation-container",
+      start: "top 90%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".affirmation-image img", {
+    opacity: 0,
+    x: 50,
+    duration: 1,
+    delay:0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".affirmation-wall",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".kind-left img",{x:-50,opacity:0,duration:1,scrollTrigger:{trigger:".kind-words-section",start:"top 85%"}});
+gsap.from(".kind-right h2,.kind-right .subtitle",{y:25,opacity:0,duration:0.8,stagger:0.2,scrollTrigger:{trigger:".kind-words-section",start:"top 80%"}});
+gsap.from(".kind-right form,.kind-container",{y:30,opacity:0,duration:1,stagger:0.3,scrollTrigger:{trigger:".kind-right form",start:"top 85%"}});
+</script>
+
+</body>
+</html>
