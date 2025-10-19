@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindful Breaks at Work</title>
+  <link rel="stylesheet" href="blogs.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Header Image */
+    .blog-header {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .blog-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(80%);
+      transition: transform 1.5s ease;
+    }
+
+    .blog-header:hover img {
+      transform: scale(1.05);
+    }
+
+    .blog-header h1 {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Blog Content */
+    .blog-container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .blog-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3 {
+      color: #6a1b9a;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #fff;
+      background: #6a1b9a;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.back-link:hover {
+      background: #9659bc;
+    }
+    /* ==== NAVBAR ==== */
+.navbar {
+  font-family: 'Nunito Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  color: #6a1b9a;
+  white-space: nowrap;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS', sans-serif;
+  position: relative;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #6a1b9a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #6a1b9a;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+  <div class="blog-header">
+    <img src="mindtalks/png.png" alt="Mindful Breaks at Work">
+ 
+  </div>
+  <div class="blog-container" id="content">
+    <p>
+      Workdays can get stressful and overwhelming. But taking short, mindful breaks throughout the day can refresh your mind, boost focus, and improve your overall productivity. Here are a few easy ways to bring mindfulness into your work routine.
+    </p>
+
+    <h3>1. The 2-Minute Pause</h3>
+    <p>
+      Every hour, take a 2-minute pause. Close your eyes, breathe deeply, and let go of any tension in your shoulders or jaw. This simple act resets your focus.
+    </p>
+
+    <h3>2. Stretch and Move</h3>
+    <p>
+      Sitting for long hours affects posture and energy. Stand up, stretch your arms, rotate your neck, and take a few steps. Movement clears your mind and boosts blood flow.
+    </p>
+
+    <h3>3. Mindful Sipping</h3>
+    <p>
+      When you drink tea or coffee, do it slowly. Notice the warmth, aroma, and taste. This tiny act of mindfulness helps bring calm even during a busy day.
+    </p>
+
+    <h3>4. Screen-Free Break</h3>
+    <p>
+      Step away from screens for a few minutes. Look out a window or focus on your breathing. Give your eyes and brain a rest from constant information.
+    </p>
+
+    <h3>5. Gratitude Reminder</h3>
+    <p>
+      Before ending your workday, think of one thing that went well. Appreciating small moments helps you leave work with a peaceful mind.
+    </p>
+
+    <p>
+      Mindful breaks don’t have to be long — even a minute of awareness can make your workday lighter and calmer. Try adding one mindful moment at a time.
+    </p>
+
+    <a href="blogs.html" class="back-link">← Back to Blogs</a>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("content").classList.add("visible");
+    });
+  </script>
+</body>
+</html>

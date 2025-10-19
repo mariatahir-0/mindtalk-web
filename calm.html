@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmZone</title>
+    <link rel="stylesheet" href="calm.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+<section class="calmzone-section">
+  <div class="container">
+    <h2 class="calmzone-title">CalmZone – Relax & Refresh</h2>
+   
+  </div>
+</section>
+<section class="tips">
+  <div class="container">
+    <h2>Your Wellness Boost</h2>
+
+    <div class="filter-buttons">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="exercise">Exercise</button>
+      <button class="filter-btn" data-category="relaxing">Relaxing</button>
+      <button class="filter-btn" data-category="diet">Diet</button>
+    </div>
+
+    <div class="tips-grid">
+      <!-- Exercise Tips -->
+      <div class="tip-card" data-category="exercise">
+        <img src="mindtalks/strachh.jpg" alt="Exercise Tip">
+        <p>Do 10 minutes of stretching daily.</p>
+      </div>
+      <div class="tip-card" data-category="exercise">
+        <img src="mindtalks/walk.jpg" alt="Exercise Tip">
+        <p>Take a short walk after meals.</p>
+      </div>
+      <div class="tip-card" data-category="exercise">
+        <img src="mindtalks/pushups.webp" alt="Exercise Tip">
+        <p>Do 15 push-ups every morning.</p>
+      </div>
+      <div class="tip-card" data-category="exercise">
+        <img src="mindtalks/yoga.png" alt="Exercise Tip">
+        <p>Practice 5 minutes of yoga daily.</p>
+      </div>
+
+      <!-- Relaxing Tips -->
+      <div class="tip-card" data-category="relaxing">
+        <img src="mindtalks/meditation.png" alt="Relaxing Tip">
+        <p>Meditate for 5 minutes in the morning.</p>
+      </div>
+      <div class="tip-card" data-category="relaxing">
+        <img src="mindtalks/music.png" alt="Relaxing Tip">
+        <p>Listen to calm music in the evening.</p>
+      </div>
+      <div class="tip-card" data-category="relaxing">
+        <img src="mindtalks/breath.webp" alt="Relaxing Tip">
+        <p>Take deep breaths to reduce stress.</p>
+      </div>
+      <div class="tip-card" data-category="relaxing">
+        <img src="mindtalks/reed.jpg" alt="Relaxing Tip">
+        <p>Read a book before sleeping.</p>
+      </div>
+
+      <!-- Diet Tips -->
+      <div class="tip-card" data-category="diet">
+        <img src="mindtalks/veg.png" alt="Diet Tip">
+        <p>Eat more fruits and vegetables.</p>
+      </div>
+      <div class="tip-card" data-category="diet">
+        <img src="mindtalks/water.png" alt="Diet Tip">
+        <p>Drink at least 8 glasses of water daily.</p>
+      </div>
+      <div class="tip-card" data-category="diet">
+        <img src="mindtalks/pro.png" alt="Diet Tip">
+        <p>Include protein in every meal.</p>
+      </div>
+      <div class="tip-card" data-category="diet">
+        <img src="mindtalks/sugar.jpg" alt="Diet Tip">
+        <p>Limit sugar intake to stay healthy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="calm-zone">
+  <div class="container calm-flex">
+ 
+    <div class="mood-left">
+      <h2>Calm Zone - Mood Tracker</h2>
+
+      <div class="mood-selector">
+        <p>How do you feel today?</p>
+        <div class="emoji-buttons">
+          <button class="mood-btn" data-mood="happy">😊 Happy</button>
+          <button class="mood-btn" data-mood="neutral">😐 Neutral</button>
+          <button class="mood-btn" data-mood="sad">😔 Sad</button>
+          <button class="mood-btn" data-mood="stressed">😣 Stressed</button>
+        </div>
+      </div>
+
+      <div class="mood-display">
+        <h3>Last 7 Days</h3>
+        <div id="mood-log" class="mood-cards"></div>
+      </div>
+    </div>
+
+  
+    <div class="mood-right">
+      <img src="mindtalks/moood1.webp" alt="Calm Zone Image">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="breathing-game-section">
+  <div class="container breathing-flex">
+
+   
+    <div class="breathing-left">
+      <img src="mindtalks/relax.png" alt="Calm Image">
+    </div>
+
+    <div class="breathing-right">
+      <h2>Breathing Relaxation</h2>
+      <p>Follow the circle to inhale and exhale slowly.</p>
+
+      <div class="breath-circle" id="breathCircle"></div>
+
+      <div class="breath-timer">
+        <span id="phase">Inhale</span>
+        <span id="count">4</span> seconds
+      </div>
+
+      <button id="startBreathing">Start</button>
+      <button id="stopBreathing">Stop</button>
+    </div>
+
+  </div>
+</section>
+<section class="memory-game-section">
+  <div class="container memory-container">
+    <h2>Memory Matching Game</h2>
+    <p>Flip cards to find matching pairs. Improve your focus!</p>
+
+    <div class="memory-grid" id="memoryGrid"></div>
+    <div class="moves-counter" id="movesCounter">Moves: 0</div>
+  </div>
+</section>
+
+<section class="calm-stats">
+   <h1> How  Users Are Relaxing</h1>
+  <div class="container stats-flex">
+   
+
+    <div class="stat-card">
+      <h3 id="moodCount">0</h3>
+      <p>Happy Moods Logged</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="breathCount">0</h3>
+      <p>Breathing Exercises Completed</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="gameCount">0</h3>
+      <p>Mini-Games Played</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="tipsCount">0</h3>
+      <p>Relaxing Tips Read</p>
+    </div>
+  </div>
+</section>
+<footer class="mindtalks-footer">
+  <div class="footer-glow"></div>
+
+  <div class="footer-container">
+  
+    <div class="footer-brand">
+      <h2>Mind<span>Talks</span></h2>
+      <p>Find calm in thoughts. Reflect. Relax. Reconnect with yourself.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Calm Zone</a></li>
+        <li><a href="#">Tips</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-newsletter">
+      <h3>Stay in Touch</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>MindTalks</span> — Find peace within 💜</p>
+  </div>
+</footer>
+<script src="calm.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".mood-left h2, .mood-selector, .mood-display", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".mood-left",
+      start: "top 85%",
+    }
+  });
+
+  gsap.from(".mood-right img", {
+    opacity: 0,
+    x: 60,
+    duration: 1.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".mood-right",
+      start: "top 80%",
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 🟣 Breathing Relaxation Section
+  gsap.from(".breathing-left img", {
+    x: -80, opacity: 0, duration: 1,
+    scrollTrigger: { trigger: ".breathing-game-section", start: "top 80%" }
+  });
+  gsap.from(".breathing-right", {
+    x: 80, opacity: 0, duration: 1, delay: 0.2,
+    scrollTrigger: { trigger: ".breathing-game-section", start: "top 80%" }
+  });
+
+  gsap.from(".memory-container h2, .memory-container p, .memory-grid, .moves-counter", {
+    opacity: 0, y: 50, duration: 1, stagger: 0.3,
+    scrollTrigger: { trigger: ".memory-game-section", start: "top 85%" }
+  });
+
+  gsap.from(".stat-card", {
+    opacity: 0, scale: 0.8, duration: 0.8, stagger: 0.2,
+    scrollTrigger: { trigger: ".calm-stats", start: "top 90%" }
+  });
+});
+</script>
+
+
+</body>
+</html>

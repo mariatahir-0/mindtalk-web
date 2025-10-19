@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips for Better Sleep</title>
+  <link rel="stylesheet" href="blogs.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Header Image */
+    .blog-header {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .blog-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(75%);
+      transition: transform 1.5s ease;
+    }
+
+    .blog-header:hover img {
+      transform: scale(1.05);
+    }
+
+    .blog-header h1 {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+    /* Blog Content */
+    .blog-container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .blog-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3 {
+      color: #6a1b9a;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .quote {
+      background: #eef2ff;
+      border-left: 5px solid #6a1b9a;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-style: italic;
+      margin: 25px 0;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #fff;
+      background: #6a5acd;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.back-link:hover {
+      background: #6a1b9a;
+    }
+    /* ==== NAVBAR ==== */
+.navbar {
+  font-family: 'Nunito Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  color: #6a1b9a;
+  white-space: nowrap;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS', sans-serif;
+  position: relative;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #6a1b9a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #6a1b9a;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+  <div class="blog-header">
+    <img src="mindtalks/slip.jpg" alt="Tips for Better Sleep">
+   
+  </div>
+
+  <div class="blog-container" id="content">
+    <p>
+      Getting good sleep is essential for your physical and mental well-being. Here are simple, science-backed tips to help you sleep better every night.
+    </p>
+
+    <h3>1. Create a Consistent Sleep Schedule</h3>
+    <p>
+      Go to bed and wake up at the same time every day, even on weekends. This helps regulate your body’s internal clock and improves sleep quality.
+    </p>
+
+    <h3>2. Limit Screen Time Before Bed</h3>
+    <p>
+      The blue light from screens can trick your brain into thinking it’s still daytime. Try avoiding phones or laptops at least 30 minutes before bed.
+    </p>
+
+    <h3>3. Keep Your Room Cool and Dark</h3>
+    <p>
+      A dark, quiet, and slightly cool environment signals your body it’s time to rest. Use curtains, eye masks, or white noise if needed.
+    </p>
+
+    <h3>4. Avoid Caffeine and Heavy Meals</h3>
+    <p>
+      Drinking coffee or eating heavy food late in the evening can make it harder to fall asleep. Choose light snacks or herbal tea instead.
+    </p>
+
+    <h3>5. Try Relaxation Techniques</h3>
+    <p>
+      Practice deep breathing, meditation, or light stretching before bed to calm your mind and release tension.
+    </p>
+
+    <div class="quote">
+      “Sleep is the golden chain that ties health and our bodies together.” — Thomas Dekker
+    </div>
+
+    <a href="blogs.html" class="back-link">← Back to Blogs</a>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("content").classList.add("visible");
+    });
+  </script>
+</body>
+</html>

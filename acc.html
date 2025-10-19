@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTalks | Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3effc;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-container {
+      width: 80%;
+      max-width: 1000px;
+      height: 70vh;
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(108, 90, 145, 0.25);
+      background: white;
+      animation: fadeIn 0.7s ease;
+    }
+    .form-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: white;
+    }
+
+    form {
+      width: 80%;
+      max-width: 340px;
+      text-align: center;
+    }
+
+    form h2 {
+      color: #6a1b9a;
+      font-weight: 700;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    form p {
+      color: #000000;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 10px;
+      border-radius: 10px;
+      border: 2px solid #d4c8f3;
+      background: transparent;
+      outline: none;
+     
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #6c5a91;
+      box-shadow: 0 0 8px rgba(108, 90, 145, 0.4);
+    }
+
+    label {
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      color: #888;
+      font-size: 14px;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #6c5a91;
+      background: #fff;
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background-color: #5a4a7a;
+      box-shadow: 0 0 10px rgba(108, 90, 145, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .google-btn {
+      background-color: white;
+      color: #444;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+      transition: 0.3s;
+    }
+
+    .google-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .google-btn:hover {
+      background-color: #fcd3ff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f9f8ff;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        height: auto;
+      }
+      .image-section {
+        height: 250px;
+      }
+      .image-section img {
+        border-radius: 0;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    
+    <div class="form-section">
+      <form onsubmit="return handleLogin(event)">
+        <h2>Welcome Back </h2>
+        <p>Log in to continue your journey</p>
+
+        <div class="input-group">
+          <input type="text" id="username" placeholder=" " required>
+          <label for="username">Username</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder=" " required>
+          <label for="password">Password</label>
+        </div>
+
+        <button type="submit">Continue</button>
+
+        <button class="google-btn" type="button" onclick="googleLogin()">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+          Continue with Google
+        </button>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="mindtalks/positivity-mindset-thinking-wellness-concept.jpg" alt="MindTalks Side Image">
+    </div>
+  </div>
+
+  <script>
+    
+    function handleLogin(e) {
+      e.preventDefault(); 
+     
+      window.location.href = "index.html"; 
+    }
+
+    function googleLogin() {
+      window.open("https://accounts.google.com/signin", "_blank");
+    }
+  </script>
+</body>
+</html>

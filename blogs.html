@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalmZone Blogs</title>
+  <link rel="stylesheet" href="blogs.css" />
+  
+</head>
+
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+  <section class="blogs-section">
+    <div class="container">
+      <h2>CalmZone Blogs</h2>
+      <p>Explore articles and tips to keep your mind fresh and relaxed.</p>
+
+    
+
+      <div class="featured-blog">
+        <img src="mindtalks/main2.jpg" alt="Featured Blog">
+        <div class="featured-text">
+        
+        </div>
+      </div>
+
+     
+      <div class="blogs-grid" id="blogsGrid">
+        <div class="blog-card" data-category="mindfulness">
+          <img src="mindtalks/morning.jpg" alt="Blog 1">
+          <h3>5 Morning Habits for a Calm Day</h3>
+          <p class="meta">By Maria | Oct 10, 2025 | Mindfulness</p>
+          <p>Start your day with simple routines that keep stress away and increase focus.</p>
+          <a href="blog1.html">Read More</a>
+        </div>
+
+        <div class="blog-card" data-category="health">
+          <img src="mindtalks/breathing.webp" alt="Blog 2">
+          <h3>Breathing Exercises for Instant Calm</h3>
+          <p class="meta">By Maria | Oct 11, 2025 | Health</p>
+          <p>Learn quick breathing techniques to reduce stress in minutes.</p>
+          <a href="blog2.html">Read More</a>
+        </div>
+
+        <div class="blog-card" data-category="work">
+          <img src="mindtalks/work.jpg" alt="Blog 3">
+          <h3>Mindful Breaks at Work</h3>
+          <p class="meta">By Maria | Oct 12, 2025 | Work</p>
+          <p>Discover how small pauses and mindfulness can boost productivity and well-being.</p>
+          <a href="blogs3.html">Read More</a>
+        </div>
+
+        <div class="blog-card" data-category="sleep">
+          <img src="mindtalks/better.jpg" alt="Blog 4">
+          <h3>Tips for Better Sleep</h3>
+          <p class="meta">By Maria | Oct 13, 2025 | Sleep</p>
+          <p>Simple habits and environment tweaks to improve sleep quality naturally.</p>
+          <a href="blog4.html">Read More</a>
+        </div>
+      </div>
+
+      <div class="related-blogs">
+        <h3>You Might Also Like</h3>
+        <div class="related-cards">
+          <a href="blog2.html">Relaxing Techniques</a>
+          <a href="blogs3.html">Mindful Work Breaks</a>
+          <a href="blog4.html">Better Sleep Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="floating-thoughts">
+  <h2>Floating Thoughts</h2>
+  <p class="subtext">Let your ideas rise...</p>
+
+  <div class="thought" style="--i:0;">Be kind to yourself</div>
+  <div class="thought" style="--i:1;">Stay positive</div>
+  <div class="thought" style="--i:2;">Keep moving</div>
+  <div class="thought" style="--i:3;">Believe in dreams</div>
+  <div class="thought" style="--i:4;">Grow every day</div>
+  <div class="thought" style="--i:5;">Smile often</div>
+</div>
+
+<section class="calm-activities">
+  <h2>Calm Activities</h2>
+  <p class="subtext">Little actions to bring peace to your day</p>
+
+  <div class="bubbles-container">
+    <div class="bubble">🧘 Meditate</div>
+    <div class="bubble">☕ Take a Break</div>
+    <div class="bubble">💧 Drink Water</div>
+    <div class="bubble">📖 Read a Book</div>
+    <div class="bubble">🌤 Go Outside</div>
+    <div class="bubble">🎧 Listen Music</div>
+    <div class="bubble">🪴 Care for Plants</div>
+  </div>
+</section>
+<footer class="mindtalks-footer">
+  <div class="footer-glow"></div>
+
+  <div class="footer-container">
+  
+    <div class="footer-brand">
+      <h2>Mind<span>Talks</span></h2>
+      <p>Find calm in thoughts. Reflect. Relax. Reconnect with yourself.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Calm Zone</a></li>
+        <li><a href="#">Tips</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-newsletter">
+      <h3>Stay in Touch</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 <span>MindTalks</span> — Find peace within 💜</p>
+  </div>
+</footer>
+
+<script src="blogs.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".featured-blog", {
+  opacity: 0,
+  scale: 0.9,
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".featured-blog",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
+  }
+});
+
+
+gsap.from(".featured-text", {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  delay: 0.3,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".featured-blog",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
+  }
+});
+gsap.registerPlugin(ScrollTrigger);
+
+// Section heading fade-in
+gsap.from(".calm-activities h2, .calm-activities .subtext", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".calm-activities",
+    start: "top 85%",
+  }
+});
+
+// Floating bubbles animation
+gsap.from(".bubble", {
+  opacity: 0,
+  y: 50,
+  scale: 0.8,
+  duration: 1.2,
+  stagger: 0.15,
+  ease: "back.out(1.7)",
+  scrollTrigger: {
+    trigger: ".bubbles-container",
+    start: "top 90%",
+  }
+});
+
+gsap.to(".bubble", {
+  y: "+=10",
+  duration: 2.5,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut"
+});
+
+</script>
+
+  
+</body>
+</html>

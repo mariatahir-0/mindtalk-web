@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathing Exercises for Instant Calm</title>
+  <link rel="stylesheet" href="blogs.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Header Image */
+    .blog-header {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .blog-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(80%);
+      transition: transform 1.5s ease;
+    }
+
+    .blog-header:hover img {
+      transform: scale(1.05);
+    }
+
+    .blog-header h1 {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 2.5rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Blog Content */
+    .blog-container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .blog-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2, h3 {
+      color: #6a1b9a;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #fff;
+      background: #6a1b9a;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.back-link:hover {
+      background: #bb7be3;
+    }
+    /* ==== NAVBAR ==== */
+.navbar {
+  font-family: 'Nunito Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  color: #6a1b9a;
+  white-space: nowrap;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS', sans-serif;
+  position: relative;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #6a1b9a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #6a1b9a;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+  <div class="blog-header">
+    <img src="mindtalks/inhale.png" alt="Breathing Exercises">
+    
+  </div>
+
+  <div class="blog-container" id="content">
+    <p>
+      Breathing is something we do every moment, yet most of us rarely notice it. Conscious breathing can instantly relax your body and clear your mind. Here are a few simple breathing exercises that you can try anywhere, anytime.
+    </p>
+
+    <h3>1. Deep Belly Breathing</h3>
+    <p>
+      Sit or lie comfortably. Place a hand on your stomach and inhale deeply through your nose. Feel your belly rise, then exhale slowly through your mouth. Repeat for one minute to calm your nervous system.
+    </p>
+
+    <h3>2. Box Breathing</h3>
+    <p>
+      Inhale for 4 seconds, hold for 4 seconds, exhale for 4 seconds, and hold again for 4 seconds. This pattern helps restore balance and focus — a favorite of athletes and professionals.
+    </p>
+
+    <h3>3. 4-7-8 Technique</h3>
+    <p>
+      Inhale through your nose for 4 counts, hold for 7 counts, and exhale through your mouth for 8 counts. It slows your heartbeat and releases stress quickly.
+    </p>
+
+    <h3>4. Alternate Nostril Breathing</h3>
+    <p>
+      Use your right thumb to close your right nostril, inhale through the left. Then switch — close your left nostril with your ring finger and exhale through the right. Repeat this for balance and clarity.
+    </p>
+
+    <h3>5. Mindful Observation</h3>
+    <p>
+      Simply observe your breath — notice how it feels as it enters and leaves your body. This awareness brings you into the present moment and releases tension.
+    </p>
+
+    <p>
+      Even one minute of focused breathing can shift your energy and mood. Try adding these exercises to your day whenever you need a quick reset.
+    </p>
+
+    <a href="blogs.html" class="back-link">← Back to Blogs</a>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("content").classList.add("visible");
+    });
+  </script>
+</body>
+</html>

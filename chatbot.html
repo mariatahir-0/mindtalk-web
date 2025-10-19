@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="logo">MindTalks</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+   
+      <li><a href="calm.html">Calm Zone</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+         <li><a href="confession.html">Confession Board</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+     
+    </ul>
+
+    
+  </nav>
+  </nav>
+<section class="chatbot-section">
+  <div class="chat-wrapper">
+
+    
+    <div class="chat-left">
+      <div class="chat-header">MindTalk Chatbot</div>
+
+      <div class="chat-messages" id="chat-messages"></div>
+
+      <div class="quick-actions">
+        <button onclick="quickMessage('Hello!')">Say Hello</button>
+        <button onclick="quickMessage('I need help')">Need Help</button>
+        <button onclick="quickMessage('Report a Problem')">Report a Problem</button>
+      </div>
+
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" class="chat-input" placeholder="Type a message...">
+        <button class="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <div class="chat-right">
+      <img src="mindtalks/bot.jpg" alt="Bot Avatar">
+    </div>
+  </div>
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">Quick Tips / FAQs</h2>
+
+    <div class="faq-card">
+      <button class="faq-question">How do I start? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        Simply type your problem in the input field above and press Enter.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <button class="faq-question">What kind of problems can I share? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        You can share any personal or work-related issue. Our bot will guide you.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <button class="faq-question">Is my chat private? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        Yes, all chats are private and securely handled.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <button class="faq-question">Can I use it on mobile? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        Absolutely! The chatbot and website are fully mobile responsive.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <button class="faq-question">What if I need human support? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        If the bot cannot solve your issue, our support team will guide you further.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<script src="chatbot.js"></script>
+<!-- ✅ GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 💬 Chatbot Section Animation
+  gsap.from(".chatbot-section .chat-left, .chatbot-section .chat-right", {
+    opacity: 0,
+    x: (i) => i === 0 ? -80 : 80, // left slide-in from left, right from right
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".chatbot-section",
+      start: "top 85%"
+    }
+  });
+
+  // 🤖 FAQ Section Heading + Cards
+  gsap.from(".faq-section .section-title", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".faq-section",
+      start: "top 85%"
+    }
+  });
+
+  gsap.from(".faq-section .faq-card", {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    stagger: 0.25,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".faq-section .container",
+      start: "top 80%"
+    }
+  });
+});
+</script>
+
+</body> \
+</html>
